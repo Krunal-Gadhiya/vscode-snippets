@@ -1,87 +1,158 @@
 {
-    "Add Sprite": {
-        "prefix": "sprite",
-        "body": [
-			"this.${1:sprite_name} = this.game.add.sprite(${2:0}, ${3:0}, 'sheet', '${4:key}', this$5);",
-			"this.${1:sprite_name}.anchor.set(${6:0.5}, ${7:0.5});",
-			"$0"
-        ],
-        "description": "Add Sprite in Phaser 2/CE"
-	},
+  "Add Sprite": {
+    "prefix": "sprite",
+    "body": [
+      "this.${1:sprite_name} = this.game.add.sprite(${2:0}, ${3:0}, 'sheet', '${4:key}', this$5);",
+      "this.${1:sprite_name}.anchor.set(${6:0.5}, ${7:0.5});",
+      "$0"
+    ],
+    "description": "Add Sprite in Phaser 2/CE"
+  },
 
-	"Add Text": {
-        "prefix": "text",
-        "body": [
-			"this.${1:text_name} = this.game.add.text(${2:0}, ${3:0}, 'text', {",
-				"${7:style 1}",
-			"}, this$4);",
-			"this.${1:text_name}.anchor.set(${5:0.5}, ${6:0.5});",
-			"$0"
-        ],
-        "description": "Add Text in Phaser 2/CE"
-	},
+  "Add Text": {
+    "prefix": "text",
+    "body": [
+      "this.${1:text_name} = this.game.add.text(${2:0}, ${3:0}, 'text', {",
+      "${7:style 1}",
+      "}, this$4);",
+      "this.${1:text_name}.anchor.set(${5:0.5}, ${6:0.5});",
+      "$0"
+    ],
+    "description": "Add Text in Phaser 2/CE"
+  },
 
-	"Basic Text Style": {
-        "prefix": "text style basic",
-        "body": [
-			"\tfont: '${1:font_type}',",
-            "\tfontSize: ${2:50},",
-            "\tfill: '#${3:ffffff}',",
-			"\talign: '${4|center,left,right|}'",
-			"$0"
-        ],
-        "description": "Basic Text Styles in Phaser 2/CE"
-	},
+  "Basic Text Style": {
+    "prefix": "text style basic",
+    "body": [
+      "\tfont: '${1:font_type}',",
+      "\tfontSize: ${2:50},",
+      "\tfill: '#${3:ffffff}',",
+      "\talign: '${4|center,left,right|}'",
+      "$0"
+    ],
+    "description": "Basic Text Styles in Phaser 2/CE"
+  },
 
-	"Complete Text Style": {
-        "prefix": "text style complete",
-        "body": [
-			"\tfont: '${1:font_type}',",
-            "\tfontSize: ${2:50},",
-            "\tfill: '#${3:ffffff}',",
-			"\talign: '${4|center,left,right|}',",
-			"\twordWrap: '${5|true,false|}',",
-            "\twordWrapWidth: ${6:100},",
-            "\tstroke: '#${7:000000}',",
-            "\tstrokeThickness: ${8:5},",
-            "\tfontStyle: '${9:italic}',",
-            "\tfontWeight: '${10:bold}',",
-            "\tmaxLines: ${11:3}",
-			"$0"
-        ],
-        "description": "Complete Text Styles in Phaser 2/CE"
-	},
+  "Complete Text Style": {
+    "prefix": "text style complete",
+    "body": [
+      "\tfont: '${1:font_type}',",
+      "\tfontSize: ${2:50},",
+      "\tfill: '#${3:ffffff}',",
+      "\talign: '${4|center,left,right|}',",
+      "\twordWrap: '${5|true,false|}',",
+      "\twordWrapWidth: ${6:100},",
+      "\tstroke: '#${7:000000}',",
+      "\tstrokeThickness: ${8:5},",
+      "\tfontStyle: '${9:italic}',",
+      "\tfontWeight: '${10:bold}',",
+      "\tmaxLines: ${11:3}",
+      "$0"
+    ],
+    "description": "Complete Text Styles in Phaser 2/CE"
+  },
 
-	"Tween": {
-		"prefix": "tween",
-		"body": [
-			"this.game.add.tween(this.${1:object_name}).${2|to,from|}({",
-			"\t$9",
-			"}, ${3:1000}, Phaser.Easing.${4:Linear.None}, ${5|true,false|}, ${6:0}, ${7:0}, ${8|false,true|});",
-			"$0"
-		],
-		"description": "Tween in Phaser 2/CE"	
-	},
+  "Tween": {
+    "prefix": "tween",
+    "body": [
+      "this.game.add.tween(this.${1:object_name}).${2|to,from|}({",
+      "\t$9",
+      "}, ${3:1000}, Phaser.Easing.${4:Linear.None}, ${5|true,false|}, ${6:0}, ${7:0}, ${8|false,true|});",
+      "$0"
+    ],
+    "description": "Tween in Phaser 2/CE"
+  },
 
-	"Tween Events": {
-		"prefix": "tween events",
-		"body": [
-			"${1:}.${2|onComplete,onStart|}.add(() => {",
-			"\t$3",
-			"});$0"
-		],
-		"description": "Tween Events in Phaser 2/CE"
-	},
-	
-	"Draw Shape": {
-		"prefix": "draw shape",
-		"body": [
-			"this.${1:object_name} = this.game.add.graphics(${2:0}, ${3:0}, this$4);",
-			"this.${1:object_name}.beginFill(0x${5:ffffff});",
-			"this.${1:object_name}.${6|drawCircle,drawRect|}(${7:x}, ${8:y}, ${9:diameter/ width, height});",
-			"this.${1:object_name}.endFill();",
-			"$0"
-		],
-		"description": "Draw Shape (circle/rect) in Phaser 2/CE"
-	}
+  "Tween Events": {
+    "prefix": "tween events",
+    "body": ["${1:}.${2|onComplete,onStart|}.add(() => {", "\t$3", "});$0"],
+    "description": "Tween Events in Phaser 2/CE"
+  },
+
+  "Draw Shape": {
+    "prefix": "draw shape",
+    "body": [
+      "this.${1:object_name} = this.game.add.graphics(${2:0}, ${3:0}, this$4);",
+      "this.${1:object_name}.beginFill(0x${5:ffffff});",
+      "this.${1:object_name}.${6|drawRect, drawCircle|}(${7:x}, ${8:y}, ${9:diameter/ width, height});",
+      "this.${1:object_name}.endFill();",
+      "$0"
+    ],
+    "description": "Draw Shape (circle/rect) in Phaser 2/CE"
+  },
+
+  "Timer Event": {
+    "prefix": "timer event",
+    "body": ["this.game.time.events.add(${1:2000}, $2);"],
+    "description": "Add Timer Event in Phaser 2/CE"
+  },
+
+  "Add Group": {
+    "prefix": "add group",
+    "body": [
+      "this.${1:group_name} = this.game.add.group(${2:this.gameGroup});"
+    ],
+    "description": "Add Group in Phaser 2/CE"
+  },
+
+  "Add Group From Class": {
+    "prefix": "add group from class",
+    "body": [
+      "this.${1:group_name} = new ${2:GroupClass}(this.game, ${3:this.gameGroup});"
+    ],
+    "description": "Add Group from Class in Phaser 2/CE"
+  },
+
+  "Class Group": {
+    "prefix": "class group",
+    "body": [
+      "",
+      "export default class ${1:ClassName} extends Phaser.Group {",
+      "\tconstructor(game, parent) {",
+      "\t\tsuper(game, parent);",
+      "",
+      "\t\tthis.init();",
+      "\t}",
+      "",
+      "\tinit() {",
+      "\t\t$2",
+      "\t}",
+      "",
+      "\tadjust() {",
+      "\t\t",
+      "\t}",
+      "}"
+    ],
+    "description": "Add Class as Group in Phaser 2/CE"
+  },
+
+  "Class Simple": {
+    "prefix": "class simple",
+    "body": [
+      "",
+      "export default class ${1:ClassName} {",
+      "\tconstructor(game, parent) {",
+      "\t\tthis.game = game;",
+      "\t\tthis.parent = parent;",
+      "",
+      "\t\tthis.init();",
+      "\t}",
+      "",
+      "\tinit() {",
+      "\t\t$2",
+      "\t}",
+      "",
+      "\tadjust() {",
+      "\t\t",
+      "\t}",
+      "}"
+    ],
+    "description": "Add Simple Class in Phaser 2/CE"
+  },
+
+  "Arrow Funtion": {
+    "prefix": "arrow function",
+    "body": ["() => {", "\t$1", "}"],
+    "description": "Add Arrow Function"
+  }
 }

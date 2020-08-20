@@ -40,7 +40,7 @@
       "\tfontSize: ${2:50},",
       "\tfill: '#${3:ffffff}',",
       "\talign: '${4|center,left,right|}',",
-      "\twordWrap: '${5|true,false|}',",
+      "\twordWrap: ${5|true,false|},",
       "\twordWrapWidth: ${6:100},",
       "\tstroke: '#${7:000000}',",
       "\tstrokeThickness: ${8:5},",
